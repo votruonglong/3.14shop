@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<link rel="stylesheet" href="from-dang-ky.css">
+<body>
+  <div class="container">
+    <h2>Đăng ký tài khoản</h2>
+    <form id="registrationForm" onsubmit="registerUser(event)">
+      <div class="form-group">
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Xác nhận mật khẩu:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Đăng ký">
+      </div>
+    </form>
+  </div>
+ <script>
+    // JavaScript để xử lý sự kiện submit form
+    function submitForm(event) {
+      event.preventDefault(); // Ngăn chặn gửi form và làm mới trang
+
+      // Lấy giá trị từ các trường input
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Kiểm tra xem các trường có được điền đầy đủ không
+      if (username && password) {
+        // Gửi dữ liệu đăng ký tài khoản đến máy chủ hoặc xử lý tại đây
+        alert("Đăng ký thành công!");
+      } else {
+        alert("Vui lòng điền đầy đủ thông tin.");
+      }
+    }
+  </script>
+</body>
+</html>
